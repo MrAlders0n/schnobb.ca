@@ -1,0 +1,161 @@
+:root {
+  --bg: #fbfaf7;
+  --text: #1d1f21;
+  --muted: #6a6f76;
+  --rule: #e2dfd8;
+  --accent: #1f6f5c;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #15171a;
+    --text: #e4e2dd;
+    --muted: #979ca4;
+    --rule: #2b2f35;
+    --accent: #6cc7ae;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
+  font-size: 1.125rem;
+  line-height: 1.65;
+}
+
+.page {
+  max-width: 38rem;
+  margin: 0 auto;
+  padding: 3.5rem 1.25rem 3rem;
+}
+
+header,
+footer,
+.projects,
+.meta {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.25rem 1.5rem;
+  margin-bottom: 3rem;
+  font-size: 0.9rem;
+}
+
+.name {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--text);
+  text-decoration: none;
+}
+
+nav a {
+  margin-left: 1.25rem;
+}
+
+nav a:first-child {
+  margin-left: 0;
+}
+
+h1 {
+  margin: 0 0 1.25rem;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  text-wrap: balance;
+}
+
+h2 {
+  margin: 2.75rem 0 0.75rem;
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+p {
+  margin: 0 0 1.15rem;
+}
+
+a {
+  color: var(--accent);
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 1px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.projects {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.9rem;
+  border-top: 1px solid var(--rule);
+}
+
+.projects li {
+  display: grid;
+  grid-template-columns: 11rem 1fr;
+  gap: 0.15rem 1rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.projects span {
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.signoff {
+  margin-top: 2.5rem;
+}
+
+.meta {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+footer {
+  margin-top: 3.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--rule);
+  font-size: 0.8rem;
+  color: var(--muted);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.25rem;
+}
+
+@media (max-width: 30rem) {
+  .page {
+    padding-top: 2.25rem;
+  }
+
+  .projects li {
+    grid-template-columns: 1fr;
+  }
+}
