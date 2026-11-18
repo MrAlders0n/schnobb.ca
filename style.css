@@ -166,6 +166,25 @@ img {
   background: var(--rule);
 }
 
+.avatar {
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.avatar.large {
+  width: 7rem;
+  height: 7rem;
+  margin-bottom: 1.5rem;
+}
+
+.hello {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
 .hero {
   display: block;
   margin-bottom: 2.25rem;
