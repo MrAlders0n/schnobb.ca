@@ -29,7 +29,7 @@
   --foam: #e8f2ef;
   --mist: #a3bdbe;
   --aqua: #63d8c6;
-  --amber: #ffb547;
+  --signal: #ff4f7b;
 
   --display: "Bricolage Grotesque", "Instrument Sans", system-ui, sans-serif;
   --body: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -40,6 +40,11 @@
 
 * {
   box-sizing: border-box;
+}
+
+::selection {
+  background: var(--signal);
+  color: var(--deep);
 }
 
 html {
@@ -74,7 +79,7 @@ a:hover {
 }
 
 a:focus-visible {
-  outline: 2px solid var(--amber);
+  outline: 2px solid var(--signal);
   outline-offset: 3px;
   border-radius: 3px;
 }
@@ -127,7 +132,7 @@ nav a[aria-current="page"] {
 
 nav a[aria-current="page"] {
   text-decoration: underline;
-  text-decoration-color: var(--amber);
+  text-decoration-color: var(--signal);
   text-decoration-thickness: 2px;
   text-underline-offset: 0.45em;
 }
@@ -137,7 +142,7 @@ footer {
   flex-wrap: wrap;
   gap: 0.5rem 1.5rem;
   margin-top: 5rem;
-  padding: 1.5rem 0 2.5rem;
+  padding: 1.5rem 0 1.5rem;
   border-top: 1px solid var(--ridge);
   font-size: 0.9rem;
 }
@@ -149,6 +154,23 @@ footer a {
 
 footer a:hover {
   color: var(--foam);
+}
+
+.credits {
+  margin: 0;
+  padding-bottom: 2.5rem;
+  color: var(--ridge);
+  font-size: 0.85rem;
+}
+
+.lost {
+  padding: clamp(3rem, 12vw, 8rem) 0 2rem;
+  max-width: 34rem;
+}
+
+.lost p {
+  color: var(--mist);
+  font-size: 1.15rem;
 }
 
 /* Type */
@@ -249,7 +271,7 @@ h2 {
 }
 
 .mesh .pulse {
-  stroke: var(--amber);
+  stroke: var(--signal);
   stroke-width: 2;
   stroke-linecap: round;
   stroke-dasharray: 1;
@@ -265,7 +287,7 @@ h2 {
 
 .mesh .ring {
   fill: none;
-  stroke: var(--amber);
+  stroke: var(--signal);
   stroke-width: 1.5;
   opacity: 0;
   transform-box: fill-box;
