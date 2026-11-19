@@ -297,14 +297,14 @@ h2 {
 
 .projects li {
   display: grid;
-  grid-template-columns: 15rem minmax(0, 1fr) auto;
+  grid-template-columns: 15rem minmax(0, 1fr);
   align-items: baseline;
   gap: 0.25rem 2rem;
   padding: 1.15rem 0;
   border-top: 1px solid var(--line);
 }
 
-.projects a {
+.projects .project {
   font-family: var(--display);
   font-size: 1.3rem;
   font-weight: 700;
@@ -315,13 +315,25 @@ h2 {
 }
 
 .projects p {
+  max-width: 40rem;
   margin: 0;
   color: var(--grey);
 }
 
 .projects .where {
-  color: var(--grey);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem 1.4rem;
+  margin-top: 0.45rem;
   font-size: 0.85rem;
+}
+
+.projects .where a {
+  color: var(--white);
+}
+
+.projects .where a:hover {
+  color: var(--red);
 }
 
 .strip {
