@@ -343,6 +343,10 @@ h2 {
   font-size: 0.85rem;
 }
 
+.projects .where + .where {
+  margin-top: 0.3rem;
+}
+
 .projects .where a {
   display: inline-flex;
   align-items: center;
