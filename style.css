@@ -204,6 +204,29 @@ h2 {
   object-fit: cover;
 }
 
+.faces {
+  display: flex;
+  flex: none;
+}
+
+.faces .avatar + .avatar {
+  margin-left: -0.7rem;
+  box-shadow: 0 0 0 3px var(--sea);
+}
+
+.prose .faces {
+  margin-bottom: 1.75rem;
+}
+
+.prose .faces .avatar {
+  margin-bottom: 0;
+}
+
+.prose .faces .avatar + .avatar {
+  margin-left: -1.5rem;
+  box-shadow: 0 0 0 4px var(--sea);
+}
+
 .lede {
   max-width: 34rem;
   font-size: 1.15rem;
