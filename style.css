@@ -1,39 +1,36 @@
 @font-face {
-  font-family: "Bricolage Grotesque";
-  src: url("/fonts/bricolage-grotesque.woff2") format("woff2");
-  font-weight: 200 800;
-  font-stretch: 75% 100%;
+  font-family: "Archivo";
+  src: url("/fonts/archivo.woff2") format("woff2");
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Instrument Sans";
-  src: url("/fonts/instrument-sans.woff2") format("woff2");
-  font-weight: 400 700;
-  font-style: normal;
+  font-family: "Plex Mono";
+  src: url("/fonts/ibm-plex-mono-400.woff2") format("woff2");
+  font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Instrument Sans";
-  src: url("/fonts/instrument-sans-italic.woff2") format("woff2");
-  font-weight: 400 700;
-  font-style: italic;
+  font-family: "Plex Mono";
+  src: url("/fonts/ibm-plex-mono-600.woff2") format("woff2");
+  font-weight: 600;
   font-display: swap;
 }
 
 :root {
-  --sea: #0d2c36;
-  --deep: #092129;
-  --ridge: #1f4c59;
-  --foam: #e8f2ef;
-  --mist: #a3bdbe;
-  --aqua: #63d8c6;
-  --signal: #ff4f7b;
+  --black: #000;
+  --red: #ff2d2d;
+  --white: #ededed;
+  --grey: #8f8f8f;
+  --dim: #565656;
+  --line: #262626;
   --ragnarok: #ff9a2e;
 
-  --display: "Bricolage Grotesque", "Instrument Sans", system-ui, sans-serif;
-  --body: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --display: "Archivo", system-ui, sans-serif;
+  --mono: "Plex Mono", ui-monospace, Menlo, Consolas, monospace;
 
   --gutter: clamp(1.25rem, 5vw, 3rem);
   color-scheme: dark;
@@ -44,23 +41,22 @@
 }
 
 ::selection {
-  background: var(--signal);
-  color: var(--deep);
+  background: var(--red);
+  color: var(--black);
 }
 
 html {
   -webkit-text-size-adjust: 100%;
-  background: var(--sea);
+  background: var(--black);
 }
 
 body {
   margin: 0;
-  background: var(--sea);
-  color: var(--foam);
-  font-family: var(--body);
-  font-size: 1.0625rem;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--mono);
+  font-size: 0.95rem;
+  line-height: 1.7;
 }
 
 img {
@@ -70,20 +66,19 @@ img {
 }
 
 a {
-  color: var(--aqua);
-  text-decoration-color: var(--signal);
+  color: var(--white);
+  text-decoration-color: var(--red);
   text-decoration-thickness: 1.5px;
-  text-underline-offset: 0.2em;
+  text-underline-offset: 0.25em;
 }
 
 a:hover {
-  color: var(--foam);
+  color: var(--red);
 }
 
 a:focus-visible {
-  outline: 2px solid var(--signal);
+  outline: 2px solid var(--red);
   outline-offset: 3px;
-  border-radius: 3px;
 }
 
 p {
@@ -93,7 +88,7 @@ p {
 /* Frame */
 
 .page {
-  max-width: 70rem;
+  max-width: 68rem;
   margin: 0 auto;
   padding: 0 var(--gutter);
 }
@@ -101,42 +96,29 @@ p {
 header {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
   gap: 0.5rem 1.5rem;
   padding: 1.5rem 0;
+  text-transform: lowercase;
 }
 
 .name {
-  font-family: var(--display);
-  font-size: 1.15rem;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-  color: var(--foam);
+  font-weight: 600;
   text-decoration: none;
 }
 
 nav {
   display: flex;
   gap: 1.5rem;
-  font-size: 0.95rem;
 }
 
 nav a {
-  color: var(--mist);
   text-decoration: none;
 }
 
-nav a:hover,
 nav a[aria-current="page"] {
-  color: var(--foam);
-}
-
-nav a[aria-current="page"] {
-  text-decoration: underline;
-  text-decoration-color: var(--signal);
-  text-decoration-thickness: 2px;
-  text-underline-offset: 0.45em;
+  color: var(--red);
 }
 
 footer {
@@ -144,100 +126,112 @@ footer {
   flex-wrap: wrap;
   gap: 0.5rem 1.5rem;
   margin-top: 5rem;
-  padding: 1.5rem 0 1.5rem;
-  border-top: 1px solid var(--ridge);
-  font-size: 0.9rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--line);
+  font-size: 0.85rem;
+  text-transform: lowercase;
 }
 
 footer a {
-  color: var(--mist);
+  color: var(--grey);
   text-decoration: none;
-}
-
-footer a:hover {
-  color: var(--signal);
 }
 
 .credits {
   margin: 0;
   padding-bottom: 2.5rem;
-  color: var(--ridge);
-  font-size: 0.85rem;
-}
-
-.lost {
-  padding: clamp(3rem, 12vw, 8rem) 0 2rem;
-  max-width: 34rem;
-}
-
-.lost p {
-  color: var(--mist);
-  font-size: 1.15rem;
+  color: #3d3d3d;
+  font-size: 0.8rem;
 }
 
 /* Type */
 
 h1 {
   margin: 0 0 1.5rem;
+  color: var(--red);
   font-family: var(--display);
-  font-size: clamp(2.5rem, 6.4vw, 4.6rem);
-  font-weight: 700;
-  font-stretch: 88%;
-  line-height: 1;
-  letter-spacing: -0.025em;
-  text-wrap: balance;
+  font-size: clamp(2rem, 6vw, 4rem);
+  font-weight: 800;
+  font-stretch: 125%;
+  line-height: 0.96;
+  letter-spacing: -0.02em;
+  text-transform: lowercase;
 }
 
 h1 span {
   display: block;
-  text-wrap: balance;
 }
 
 h2 {
-  margin: 0 0 1.25rem;
-  font-family: var(--display);
-  font-size: 1.6rem;
-  font-weight: 600;
-  line-height: 1.15;
-  letter-spacing: -0.015em;
-}
-
-/* Home: intro beside the mesh */
-
-.opener {
-  display: block;
-  margin-top: 0.5rem;
-  overflow: hidden;
-  border-radius: 8px;
-  aspect-ratio: 21 / 9;
-}
-
-.opener img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 50% 60%;
-}
-
-.intro {
-  max-width: 46rem;
-  padding: clamp(2rem, 5vw, 3.5rem) 0 clamp(3rem, 7vw, 5rem);
-}
-
-.who {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  margin-bottom: 1.75rem;
-  color: var(--mist);
+  margin: 0 0 1.5rem;
+  color: var(--red);
+  font-family: var(--mono);
   font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.4;
 }
 
-.avatar {
-  width: 2.75rem;
-  height: 2.75rem;
-  border-radius: 50%;
-  object-fit: cover;
+/* Home: title card */
+
+.card {
+  position: relative;
+  display: flex;
+  min-height: 100svh;
+  background: var(--black) url("/photos/full/black-sand-coast.jpg") center / cover;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.35) 40%, rgba(0, 0, 0, 0.9) 100%);
+}
+
+.card .page {
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  width: 100%;
+}
+
+.title {
+  margin-top: auto;
+  padding-bottom: clamp(2rem, 7vw, 4.5rem);
+}
+
+.title h1 {
+  margin: 0;
+  font-size: clamp(2rem, 7.2vw, 6.25rem);
+  line-height: 0.94;
+}
+
+.hello {
+  margin: 0 0 1rem;
+}
+
+/* Home: sections */
+
+.section {
+  padding-top: clamp(3rem, 8vw, 5.5rem);
+}
+
+.section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: auto minmax(0, 38rem);
+  align-items: start;
+  gap: 1.5rem 2.5rem;
+}
+
+.about p + p {
+  color: var(--grey);
 }
 
 .faces {
@@ -245,30 +239,20 @@ h2 {
   flex: none;
 }
 
+.avatar {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 .faces .avatar:first-child {
   box-shadow: 0 0 0 2px var(--ragnarok);
 }
 
 .faces .avatar + .avatar {
-  margin-left: -0.7rem;
-  box-shadow: 0 0 0 2px var(--signal);
-}
-
-.prose .faces {
-  margin-bottom: 1.75rem;
-}
-
-.prose .faces .avatar {
-  margin-bottom: 0;
-}
-
-.prose .faces .avatar:first-child {
-  box-shadow: 0 0 0 3px var(--ragnarok);
-}
-
-.prose .faces .avatar + .avatar {
-  margin-left: -1.5rem;
-  box-shadow: 0 0 0 3px var(--signal);
+  margin-left: -1rem;
+  box-shadow: 0 0 0 2px var(--red);
 }
 
 .handle {
@@ -280,42 +264,46 @@ h2 {
   overflow: hidden;
   vertical-align: bottom;
   white-space: nowrap;
-  color: var(--signal);
+  color: var(--red);
   font-weight: 600;
 }
 
-.lede {
-  max-width: 34rem;
-  font-size: 1.15rem;
-  color: var(--mist);
+/* The refinement field: numbers drift, the scary ones swell. */
+
+.field {
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  gap: 0.2rem 0;
+  padding: 1rem 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  color: var(--dim);
+  text-align: center;
 }
 
-.lede p:first-child {
-  color: var(--foam);
+.field span {
+  display: inline-block;
+  animation: drift 5s ease-in-out infinite;
 }
 
-/* Home: sections */
-
-.section {
-  padding: clamp(2.5rem, 6vw, 4rem) 0 0;
-  border-top: 1px solid var(--ridge);
+.field .hot {
+  color: var(--red);
+  animation-name: swell;
 }
 
-.section + .section {
-  margin-top: clamp(2.5rem, 6vw, 4rem);
+@keyframes drift {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(1.5px, -2px); }
 }
 
-.section-head {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 1rem;
+@keyframes swell {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.75); }
 }
 
 .aside {
-  margin: -0.75rem 0 1.5rem;
-  color: var(--mist);
-  font-size: 0.95rem;
+  margin: 0.9rem 0 0.75rem;
+  color: var(--grey);
 }
 
 .projects {
@@ -326,126 +314,119 @@ h2 {
 
 .projects li {
   display: grid;
-  grid-template-columns: 13rem minmax(0, 1fr) auto;
+  grid-template-columns: 15rem minmax(0, 1fr) auto;
   align-items: baseline;
   gap: 0.25rem 2rem;
-  padding: 1.1rem 0;
-  border-top: 1px solid var(--ridge);
-}
-
-.projects li:first-child {
-  border-top: 0;
-  padding-top: 0.25rem;
+  padding: 1.15rem 0;
+  border-top: 1px solid var(--line);
 }
 
 .projects a {
   font-family: var(--display);
-  font-size: 1.25rem;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  color: var(--foam);
+  font-size: 1.3rem;
+  font-weight: 700;
+  font-stretch: 112%;
+  line-height: 1.2;
   text-decoration: none;
-}
-
-.projects a:hover {
-  color: var(--signal);
+  text-transform: lowercase;
 }
 
 .projects p {
   margin: 0;
-  color: var(--mist);
+  color: var(--grey);
 }
 
 .projects .where {
-  color: var(--mist);
-  font-size: 0.9rem;
+  color: var(--grey);
+  font-size: 0.85rem;
 }
 
 .strip {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 0.75rem;
-  aspect-ratio: 16 / 7.5;
-}
-
-.strip a {
-  overflow: hidden;
-  border-radius: 6px;
-}
-
-.strip a:first-child {
-  grid-row: span 2;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
 }
 
 .strip img {
   width: 100%;
-  height: 100%;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.strip a:hover img {
-  transform: scale(1.03);
 }
 
 /* Inner pages */
 
 .prose {
-  max-width: 40rem;
+  max-width: 42rem;
   padding-top: clamp(1.5rem, 5vw, 3.5rem);
 }
 
-.prose h1 {
-  font-size: clamp(2.25rem, 5vw, 3.4rem);
+.prose h2 {
+  margin: 2.75rem 0 0.6rem;
+  color: var(--white);
+  font-family: var(--display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  font-stretch: 112%;
+  line-height: 1.2;
+  text-transform: lowercase;
 }
 
-.prose h2 {
-  margin-top: 2.75rem;
-  margin-bottom: 0.6rem;
-  font-size: 1.35rem;
+.prose .faces {
+  margin-bottom: 1.75rem;
 }
 
 .prose .avatar {
   width: 6.5rem;
   height: 6.5rem;
-  margin-bottom: 1.75rem;
+}
+
+.prose .faces .avatar:first-child {
+  box-shadow: 0 0 0 3px var(--ragnarok);
+}
+
+.prose .faces .avatar + .avatar {
+  margin-left: -1.5rem;
+  box-shadow: 0 0 0 3px var(--red);
 }
 
 .meta {
-  color: var(--mist);
-  font-size: 0.9rem;
+  color: var(--grey);
+  font-size: 0.85rem;
 }
 
 .gallery-intro {
   padding-top: clamp(1.5rem, 5vw, 3.5rem);
 }
 
-.gallery-intro h1 {
-  font-size: clamp(2.25rem, 5vw, 3.4rem);
-}
-
 .gallery-intro p {
-  max-width: 34rem;
-  color: var(--mist);
+  max-width: 38rem;
+  color: var(--grey);
 }
 
 .gallery {
   columns: 3;
-  column-gap: 0.75rem;
+  column-gap: 0.5rem;
   margin-top: 2.25rem;
 }
 
 .gallery a {
   display: block;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
   break-inside: avoid;
 }
 
 .gallery img {
   width: 100%;
-  border-radius: 6px;
-  background: var(--ridge);
+  background: var(--line);
+}
+
+.lost {
+  max-width: 38rem;
+  padding: clamp(3rem, 12vw, 8rem) 0 2rem;
+}
+
+.lost p {
+  color: var(--grey);
 }
 
 @media (max-width: 60rem) {
@@ -455,9 +436,16 @@ h2 {
 }
 
 @media (max-width: 48rem) {
-  .opener {
-    aspect-ratio: 4 / 3;
-    object-position: 60% 50%;
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .field {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .field span:nth-child(n + 61) {
+    display: none;
   }
 
   .projects li {
@@ -466,18 +454,10 @@ h2 {
 
   .strip {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    aspect-ratio: auto;
-  }
-
-  .strip a {
-    aspect-ratio: 1;
   }
 
   .strip a:first-child {
     grid-column: span 2;
-    grid-row: auto;
-    aspect-ratio: 16 / 9;
   }
 }
 
@@ -488,7 +468,7 @@ h2 {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .strip img {
-    transition: none;
+  .field span {
+    animation: none;
   }
 }
