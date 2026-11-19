@@ -30,6 +30,7 @@
   --mist: #a3bdbe;
   --aqua: #63d8c6;
   --signal: #ff4f7b;
+  --ragnarok: #ff9a2e;
 
   --display: "Bricolage Grotesque", "Instrument Sans", system-ui, sans-serif;
   --body: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -244,6 +245,10 @@ h2 {
   flex: none;
 }
 
+.faces .avatar:first-child {
+  box-shadow: 0 0 0 2px var(--ragnarok);
+}
+
 .faces .avatar + .avatar {
   margin-left: -0.7rem;
   box-shadow: 0 0 0 2px var(--signal);
@@ -255,6 +260,10 @@ h2 {
 
 .prose .faces .avatar {
   margin-bottom: 0;
+}
+
+.prose .faces .avatar:first-child {
+  box-shadow: 0 0 0 3px var(--ragnarok);
 }
 
 .prose .faces .avatar + .avatar {
