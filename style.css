@@ -224,13 +224,17 @@ h2 {
 }
 
 .about {
-  display: grid;
-  grid-template-columns: auto minmax(0, 38rem);
-  align-items: start;
-  gap: 1.5rem 2.5rem;
+  max-width: 40rem;
 }
 
-.about p + p {
+.who {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  margin-bottom: 1.75rem;
+}
+
+.about .who ~ p + p {
   color: var(--grey);
 }
 
@@ -403,10 +407,6 @@ h2 {
 }
 
 @media (max-width: 48rem) {
-  .about {
-    grid-template-columns: 1fr;
-  }
-
   .projects li {
     grid-template-columns: 1fr;
   }
