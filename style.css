@@ -446,6 +446,86 @@ h2 {
   background: var(--line);
 }
 
+html.viewing {
+  overflow: hidden;
+}
+
+.viewer {
+  width: 100vw;
+  max-width: 100vw;
+  height: 100dvh;
+  max-height: 100dvh;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: var(--black);
+  color: var(--white);
+  overflow: hidden;
+}
+
+.viewer:focus {
+  outline: none;
+}
+
+.viewer[open] {
+  display: flex;
+  flex-direction: column;
+}
+
+.viewer::backdrop {
+  background: var(--black);
+}
+
+.viewer img {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  object-fit: contain;
+}
+
+.viewer-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem var(--gutter) calc(0.75rem + env(safe-area-inset-bottom));
+}
+
+.viewer-count {
+  color: var(--grey);
+  font-size: 0.85rem;
+  padding: 0 0.5rem;
+}
+
+.viewer button {
+  padding: 0.6rem 0.75rem;
+  border: 0;
+  background: none;
+  color: var(--white);
+  font: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--red);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 0.25em;
+  cursor: pointer;
+}
+
+.viewer button:hover {
+  color: var(--red);
+}
+
+.viewer button:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 2px;
+}
+
+.viewer button[data-close] {
+  margin-left: auto;
+}
+
+.viewer button[data-go="-1"] {
+  margin-left: -0.75rem;
+}
+
 .lost {
   max-width: 38rem;
   padding: clamp(3rem, 12vw, 8rem) 0 2rem;
