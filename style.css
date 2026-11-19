@@ -312,6 +312,12 @@ h2 {
   gap: 1rem;
 }
 
+.aside {
+  margin: -0.75rem 0 1.5rem;
+  color: var(--mist);
+  font-size: 0.95rem;
+}
+
 .projects {
   margin: 0;
   padding: 0;
