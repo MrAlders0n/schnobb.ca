@@ -8,10 +8,12 @@
   var start = null;
   var DURATION = 1100;
   el.setAttribute("aria-label", target);
+  // Hold the finished width so the line never reflows while scrambling.
+  el.style.width = el.getBoundingClientRect().width + "px";
   function frame(now) {
     if (start === null) start = now;
     var solved = Math.floor(((now - start) / DURATION) * target.length);
-    if (solved >= target.length) { el.textContent = target; return; }
+    if (solved >= target.length) { el.textContent = target; el.style.width = ""; return; }
     var out = target.slice(0, solved);
     for (var i = solved; i < target.length; i++) {
       out += glyphs.charAt(Math.floor(Math.random() * glyphs.length));

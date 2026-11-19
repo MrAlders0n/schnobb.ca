@@ -262,7 +262,15 @@ h2 {
   box-shadow: 0 0 0 3px var(--signal);
 }
 
+.handle {
+  white-space: nowrap;
+}
+
 .decode {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  white-space: nowrap;
   color: var(--signal);
   font-weight: 600;
 }
