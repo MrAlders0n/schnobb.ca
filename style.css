@@ -121,6 +121,18 @@ nav a[aria-current="page"] {
   color: var(--red);
 }
 
+nav {
+  align-items: center;
+}
+
+nav .icon {
+  display: flex;
+}
+
+nav .icon + .icon {
+  margin-left: -0.5rem;
+}
+
 footer {
   display: flex;
   flex-wrap: wrap;
