@@ -406,6 +406,15 @@ h2 {
   box-shadow: 0 0 0 3px var(--red);
 }
 
+.prose ul {
+  margin: 0 0 1.1rem;
+  padding-left: 1.4rem;
+}
+
+.prose li::marker {
+  color: var(--red);
+}
+
 .meta {
   color: var(--grey);
   font-size: 0.85rem;
