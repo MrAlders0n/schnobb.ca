@@ -3,9 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d2c36">
   <title>Chris Schnobb</title>
   <meta name="description" content="Chris Schnobb (MrAlders0n): IT security consultant in Ottawa who builds mesh radio networks and the tools around them.">
   <link rel="canonical" href="https://schnobb.ca/">
+  <link rel="preload" href="/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
@@ -20,44 +22,114 @@
     </header>
 
     <main>
-      <a class="hero" href="/photos/"><img src="/photos/thumb/black-sand-coast.jpg" srcset="/photos/thumb/black-sand-coast.jpg 900w, /photos/full/black-sand-coast.jpg 2000w" sizes="(max-width: 40rem) 100vw, 38rem" alt="Long black sand coastline with lines of white surf and a large rock outcrop, seen from a drone" width="900" height="506"></a>
+      <section class="intro">
+        <div>
+          <p class="who"><img class="avatar" src="/chris.jpg" alt="" width="200" height="200"> Chris Schnobb, known online as MrAlders0n</p>
+          <h1><span>Security by day.</span> <span>Mesh radio after hours.</span></h1>
+          <div class="lede">
+            <p>I've spent ten years in IT security, which mostly teaches you how much depends on the internet staying up.</p>
+            <p>That got me into radio, then LoRa, then building a mesh network around Ottawa that works without it. I also fly a drone when I travel.</p>
+          </div>
+        </div>
+        <svg class="mesh" viewBox="20 10 450 386" role="img" aria-label="A mesh network: a message spreads from one radio to the next until every node has it.">
+          <line class="link" x1="60" y1="70" x2="195" y2="36"/>
+          <line class="link" x1="195" y1="36" x2="330" y2="92"/>
+          <line class="link" x1="330" y1="92" x2="436" y2="48"/>
+          <line class="link" x1="60" y1="70" x2="112" y2="206"/>
+          <line class="link" x1="195" y1="36" x2="252" y2="178"/>
+          <line class="link" x1="330" y1="92" x2="252" y2="178"/>
+          <line class="link" x1="330" y1="92" x2="392" y2="222"/>
+          <line class="link" x1="436" y1="48" x2="392" y2="222"/>
+          <line class="link" x1="112" y1="206" x2="252" y2="178"/>
+          <line class="link" x1="252" y1="178" x2="392" y2="222"/>
+          <line class="link" x1="112" y1="206" x2="58" y2="338"/>
+          <line class="link" x1="112" y1="206" x2="204" y2="330"/>
+          <line class="link" x1="252" y1="178" x2="204" y2="330"/>
+          <line class="link" x1="252" y1="178" x2="332" y2="366"/>
+          <line class="link" x1="392" y1="222" x2="332" y2="366"/>
+          <line class="link" x1="392" y1="222" x2="442" y2="332"/>
+          <line class="link" x1="58" y1="338" x2="204" y2="330"/>
+          <line class="link" x1="204" y1="330" x2="332" y2="366"/>
+          <line class="link" x1="332" y1="366" x2="442" y2="332"/>
+          <line class="pulse" data-a="0" data-b="1" pathLength="1" x1="60" y1="70" x2="195" y2="36"/>
+          <line class="pulse" data-a="1" data-b="2" pathLength="1" x1="195" y1="36" x2="330" y2="92"/>
+          <line class="pulse" data-a="2" data-b="3" pathLength="1" x1="330" y1="92" x2="436" y2="48"/>
+          <line class="pulse" data-a="0" data-b="4" pathLength="1" x1="60" y1="70" x2="112" y2="206"/>
+          <line class="pulse" data-a="1" data-b="5" pathLength="1" x1="195" y1="36" x2="252" y2="178"/>
+          <line class="pulse" data-a="2" data-b="5" pathLength="1" x1="330" y1="92" x2="252" y2="178"/>
+          <line class="pulse" data-a="2" data-b="6" pathLength="1" x1="330" y1="92" x2="392" y2="222"/>
+          <line class="pulse" data-a="3" data-b="6" pathLength="1" x1="436" y1="48" x2="392" y2="222"/>
+          <line class="pulse" data-a="4" data-b="5" pathLength="1" x1="112" y1="206" x2="252" y2="178"/>
+          <line class="pulse" data-a="5" data-b="6" pathLength="1" x1="252" y1="178" x2="392" y2="222"/>
+          <line class="pulse" data-a="4" data-b="7" pathLength="1" x1="112" y1="206" x2="58" y2="338"/>
+          <line class="pulse" data-a="4" data-b="8" pathLength="1" x1="112" y1="206" x2="204" y2="330"/>
+          <line class="pulse" data-a="5" data-b="8" pathLength="1" x1="252" y1="178" x2="204" y2="330"/>
+          <line class="pulse" data-a="5" data-b="9" pathLength="1" x1="252" y1="178" x2="332" y2="366"/>
+          <line class="pulse" data-a="6" data-b="9" pathLength="1" x1="392" y1="222" x2="332" y2="366"/>
+          <line class="pulse" data-a="6" data-b="10" pathLength="1" x1="392" y1="222" x2="442" y2="332"/>
+          <line class="pulse" data-a="7" data-b="8" pathLength="1" x1="58" y1="338" x2="204" y2="330"/>
+          <line class="pulse" data-a="8" data-b="9" pathLength="1" x1="204" y1="330" x2="332" y2="366"/>
+          <line class="pulse" data-a="9" data-b="10" pathLength="1" x1="332" y1="366" x2="442" y2="332"/>
+          <g class="node" data-x="60" data-y="70"><circle class="ring" cx="60" cy="70" r="6"/><circle class="dot" cx="60" cy="70" r="6"/></g>
+          <g class="node" data-x="195" data-y="36"><circle class="ring" cx="195" cy="36" r="6"/><circle class="dot" cx="195" cy="36" r="6"/></g>
+          <g class="node" data-x="330" data-y="92"><circle class="ring" cx="330" cy="92" r="6"/><circle class="dot" cx="330" cy="92" r="6"/></g>
+          <g class="node" data-x="436" data-y="48"><circle class="ring" cx="436" cy="48" r="6"/><circle class="dot" cx="436" cy="48" r="6"/></g>
+          <g class="node" data-x="112" data-y="206"><circle class="ring" cx="112" cy="206" r="6"/><circle class="dot" cx="112" cy="206" r="6"/></g>
+          <g class="node" data-x="252" data-y="178"><circle class="ring" cx="252" cy="178" r="6"/><circle class="dot" cx="252" cy="178" r="6"/></g>
+          <g class="node" data-x="392" data-y="222"><circle class="ring" cx="392" cy="222" r="6"/><circle class="dot" cx="392" cy="222" r="6"/></g>
+          <g class="node" data-x="58" data-y="338"><circle class="ring" cx="58" cy="338" r="6"/><circle class="dot" cx="58" cy="338" r="6"/></g>
+          <g class="node" data-x="204" data-y="330"><circle class="ring" cx="204" cy="330" r="6"/><circle class="dot" cx="204" cy="330" r="6"/></g>
+          <g class="node" data-x="332" data-y="366"><circle class="ring" cx="332" cy="366" r="6"/><circle class="dot" cx="332" cy="366" r="6"/></g>
+          <g class="node" data-x="442" data-y="332"><circle class="ring" cx="442" cy="332" r="6"/><circle class="dot" cx="442" cy="332" r="6"/></g>
+        </svg>
+      </section>
 
-      <p class="hello"><img class="avatar" src="/chris.jpg" alt="Chris Schnobb" width="200" height="200"> Hi,</p>
+      <section class="section">
+        <h2>Projects</h2>
+        <ul class="projects">
+          <li>
+            <a href="https://meshmapper.net">MeshMapper</a>
+            <p>Coverage maps for MeshCore networks, built from radio data the community collects with the MeshMapper app.</p>
+            <span class="where">meshmapper.net</span>
+          </li>
+          <li>
+            <a href="https://github.com/MeshCore-Beacon">MeshCore Beacon</a>
+            <p>Watches a mesh from above: live packets, nodes, routes and traces on a map and in lists.</p>
+            <span class="where">github.com/MeshCore-Beacon</span>
+          </li>
+          <li>
+            <a href="https://meshcore.ca">MeshCore Canada</a>
+            <p>Community documentation and network tools for MeshCore across Canada, in English and French.</p>
+            <span class="where">meshcore.ca</span>
+          </li>
+          <li>
+            <a href="https://ottawamesh.ca">Ottawa Mesh</a>
+            <p>The off-grid LoRa mesh network around Ottawa, run by local radio enthusiasts.</p>
+            <span class="where">ottawamesh.ca</span>
+          </li>
+          <li>
+            <a href="https://github.com/MrAlders0n">Everything else</a>
+            <p>Firmware builds, repeater tooling and scripts.</p>
+            <span class="where">github.com/MrAlders0n</span>
+          </li>
+        </ul>
+      </section>
 
-      <p>I'm Chris, known online as MrAlders0n. I've spent ten years in IT security, which mostly teaches you how much depends on the internet staying up.</p>
-
-      <p>That got me into radio, then LoRa, then building a mesh network around Ottawa that works without it.</p>
-
-      <p>I also fly a drone when I travel. Some of the <a href="/photos/">photos</a> are here.</p>
-
-      <h2>Projects</h2>
-      <ul class="projects">
-        <li>
-          <a href="https://meshmapper.net">MeshMapper</a>
-          <span>Coverage maps for MeshCore networks, built from radio data the community collects with the MeshMapper app.</span>
-        </li>
-        <li>
-          <a href="https://github.com/MeshCore-Beacon">MeshCore Beacon</a>
-          <span>Watches a mesh from above: live packets, nodes, routes and traces on a map and in lists.</span>
-        </li>
-        <li>
-          <a href="https://meshcore.ca">MeshCore Canada</a>
-          <span>Community documentation and network tools for MeshCore across Canada, in English and French.</span>
-        </li>
-        <li>
-          <a href="https://ottawamesh.ca">Ottawa Mesh</a>
-          <span>The off-grid LoRa mesh network around Ottawa, run by local radio enthusiasts.</span>
-        </li>
-        <li>
-          <a href="https://github.com/MrAlders0n">Everything else</a>
-          <span>Firmware builds, repeater tooling and scripts on GitHub.</span>
-        </li>
-      </ul>
-
-      <p class="signoff">Chris</p>
+      <section class="section">
+        <div class="section-head">
+          <h2>From the air</h2>
+          <a href="/photos/">All photos</a>
+        </div>
+        <div class="strip">
+          <a href="/photos/"><img src="/photos/thumb/black-sand-coast.jpg" srcset="/photos/thumb/black-sand-coast.jpg 900w, /photos/full/black-sand-coast.jpg 2000w" sizes="(max-width: 48rem) 100vw, 46rem" alt="Long black sand coastline with lines of white surf and a large rock outcrop" width="900" height="506"></a>
+          <a href="/photos/"><img src="/photos/thumb/rock-pool-from-above.jpg" alt="Ocean rock pool seen straight down, with surf breaking on the boulders around it" width="900" height="506" loading="lazy"></a>
+          <a href="/photos/"><img src="/photos/thumb/harbour-islands.jpg" alt="Green hills dropping to a blue harbour dotted with small islands" width="900" height="506" loading="lazy"></a>
+        </div>
+      </section>
     </main>
 
     <footer>
+      <a href="/">Home</a>
       <a href="/about/">About</a>
       <a href="/photos/">Photos</a>
       <a href="/privacy/">Privacy</a>
@@ -66,5 +138,6 @@
       <a href="mailto:hello@schnobb.ca">hello@schnobb.ca</a>
     </footer>
   </div>
+  <script src="/mesh.js" defer></script>
 </body>
 </html>
