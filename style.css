@@ -196,7 +196,6 @@ h2 {
 }
 
 .title {
-  margin-top: auto;
   padding-bottom: clamp(2rem, 7vw, 4.5rem);
 }
 
@@ -272,13 +271,14 @@ h2 {
 
 .field {
   display: grid;
+  flex: 1;
   grid-template-columns: repeat(24, 1fr);
-  gap: 0.2rem 0;
-  padding: 1rem 0;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  color: var(--dim);
+  align-content: space-evenly;
+  padding: 1rem 0 2rem;
+  color: rgba(237, 237, 237, 0.5);
+  font-size: clamp(0.95rem, 1.5vw, 1.15rem);
   text-align: center;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
 }
 
 .field span {
@@ -302,7 +302,7 @@ h2 {
 }
 
 .aside {
-  margin: 0.9rem 0 0.75rem;
+  margin: -0.75rem 0 1rem;
   color: var(--grey);
 }
 
@@ -444,7 +444,7 @@ h2 {
     grid-template-columns: repeat(12, 1fr);
   }
 
-  .field span:nth-child(n + 61) {
+  .field span:nth-child(n + 109) {
     display: none;
   }
 
