@@ -196,6 +196,7 @@ h2 {
 }
 
 .title {
+  margin-top: auto;
   padding-bottom: clamp(2rem, 7vw, 4.5rem);
 }
 
@@ -265,40 +266,6 @@ h2 {
   white-space: nowrap;
   color: var(--red);
   font-weight: 600;
-}
-
-/* The refinement field: numbers drift, the scary ones swell. */
-
-.field {
-  display: grid;
-  flex: 1;
-  grid-template-columns: repeat(24, 1fr);
-  align-content: space-evenly;
-  padding: 1rem 0 2rem;
-  color: rgba(237, 237, 237, 0.5);
-  font-size: clamp(0.95rem, 1.5vw, 1.15rem);
-  text-align: center;
-  text-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
-}
-
-.field span {
-  display: inline-block;
-  animation: drift 5s ease-in-out infinite;
-}
-
-.field .hot {
-  color: var(--red);
-  animation-name: swell;
-}
-
-@keyframes drift {
-  0%, 100% { transform: translate(0, 0); }
-  50% { transform: translate(1.5px, -2px); }
-}
-
-@keyframes swell {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.75); }
 }
 
 .aside {
@@ -440,14 +407,6 @@ h2 {
     grid-template-columns: 1fr;
   }
 
-  .field {
-    grid-template-columns: repeat(12, 1fr);
-  }
-
-  .field span:nth-child(n + 109) {
-    display: none;
-  }
-
   .projects li {
     grid-template-columns: 1fr;
   }
@@ -464,11 +423,5 @@ h2 {
 @media (max-width: 34rem) {
   .gallery {
     columns: 1;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .field span {
-    animation: none;
   }
 }
