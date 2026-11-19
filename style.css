@@ -202,12 +202,24 @@ h2 {
 
 /* Home: intro beside the mesh */
 
+.opener {
+  display: block;
+  margin-top: 0.5rem;
+  overflow: hidden;
+  border-radius: 8px;
+  aspect-ratio: 21 / 9;
+}
+
+.opener img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 60%;
+}
+
 .intro {
-  display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
-  align-items: center;
-  gap: 2rem 3rem;
-  padding: clamp(1.5rem, 5vw, 4rem) 0 clamp(3rem, 7vw, 5.5rem);
+  max-width: 46rem;
+  padding: clamp(2rem, 5vw, 3.5rem) 0 clamp(3rem, 7vw, 5rem);
 }
 
 .who {
@@ -257,41 +269,6 @@ h2 {
 
 .lede p:first-child {
   color: var(--foam);
-}
-
-.mesh {
-  width: 100%;
-  height: auto;
-  overflow: visible;
-}
-
-.mesh .link {
-  stroke: var(--ridge);
-  stroke-width: 1.5;
-}
-
-.mesh .pulse {
-  stroke: var(--signal);
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-dasharray: 1;
-  stroke-dashoffset: 1;
-  opacity: 0;
-}
-
-.mesh .dot {
-  fill: var(--sea);
-  stroke: var(--aqua);
-  stroke-width: 2;
-}
-
-.mesh .ring {
-  fill: none;
-  stroke: var(--signal);
-  stroke-width: 1.5;
-  opacity: 0;
-  transform-box: fill-box;
-  transform-origin: center;
 }
 
 /* Home: sections */
@@ -455,12 +432,9 @@ h2 {
 }
 
 @media (max-width: 48rem) {
-  .intro {
-    grid-template-columns: 1fr;
-  }
-
-  .mesh {
-    max-width: 26rem;
+  .opener {
+    aspect-ratio: 4 / 3;
+    object-position: 60% 50%;
   }
 
   .projects li {
